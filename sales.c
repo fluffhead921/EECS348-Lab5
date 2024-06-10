@@ -21,10 +21,10 @@ int main() {
     printf("Monthly sales report:\n");
     for (int i=0; i<12; i++) {
         if (strlen(months[i]) < 7) {
-            printf("%s:\t\t%f\n", months[i], sales[i]);
+            printf("%s:\t\t%.2f\n", months[i], sales[i]);
         }
         else {
-            printf("%s:\t%f\n", months[i], sales[i]);
+            printf("%s:\t%.2f\n", months[i], sales[i]);
         }
     }
 
