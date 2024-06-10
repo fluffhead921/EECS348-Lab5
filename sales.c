@@ -7,7 +7,7 @@
 int main() {
     FILE* filePointer;
     char buf[MAX_CHARS];
-    char sales[12][MAX_CHARS];
+    float sales[12];
     char *months[] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 
     filePointer = fopen("input.txt", "r");
@@ -15,18 +15,16 @@ int main() {
     //write 12 numbers to sales
     for (int i=0; i<12; i++) {
         fgets(buf, MAX_CHARS, filePointer);
-        for (int j=0; j<20; j++) {
-            sales[i][j] = buf[j];
-        }
+        sales[i] = atof(buf);
     }
 
     printf("Monthly sales report:\n");
     for (int i=0; i<12; i++) {
         if (strlen(months[i]) < 7) {
-            printf("%s:\t\t%s", months[i], sales[i]);
+            printf("%s:\t\t%f\n", months[i], sales[i]);
         }
         else {
-            printf("%s:\t%s", months[i], sales[i]);
+            printf("%s:\t%f\n", months[i], sales[i]);
         }
     }
 
