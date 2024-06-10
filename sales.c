@@ -22,7 +22,12 @@ int main() {
 
     printf("Monthly sales report:\n");
     for (int i=0; i<12; i++) {
-        printf("%s:\t%s", months[i], sales[i]);
+        if (strlen(months[i]) < 7) {
+            printf("%s:\t\t%s", months[i], sales[i]);
+        }
+        else {
+            printf("%s:\t%s", months[i], sales[i]);
+        }
     }
 
     fclose(filePointer);
