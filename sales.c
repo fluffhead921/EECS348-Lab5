@@ -5,6 +5,7 @@
 #define MAX_CHARS 20
 
 int main() {
+    char fileName[MAX_CHARS];
     FILE* filePointer;
     char buf[MAX_CHARS];
     float sales[12];
@@ -13,7 +14,10 @@ int main() {
     float salesSorted[12];
     char *monthsSorted[12];
 
-    filePointer = fopen("input.txt", "r");
+    printf("Enter the file name containing sales data:\n");
+    scanf("%s", fileName);
+    printf("\n");
+    filePointer = fopen(fileName, "r");
     
     //write 12 numbers to sales, find total, initialize sorted arrays
     for (int i=0; i<12; i++) {
