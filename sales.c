@@ -55,6 +55,10 @@ int main() {
     }
 
     //summary
+    printf("Sales summary:\n");
+    printf("Minimum sales:\t%.2f\t(%s)\n", salesSorted[0], monthsSorted[0]);
+    printf("Maximum sales:\t%.2f\t(%s)\n", salesSorted[11], monthsSorted[11]);
+    printf("Average sales:\t%.2f\n\n", total / 12);
 
     //moving average
 
