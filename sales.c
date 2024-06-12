@@ -6,7 +6,7 @@
 
 int main() {
     char fileName[MAX_CHARS];
-    FILE* filePointer;
+    FILE *filePointer;
     char buf[MAX_CHARS];
     float sales[12];
     char *months[] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
@@ -14,6 +14,7 @@ int main() {
     float salesSorted[12];
     char *monthsSorted[12];
 
+    //file name input
     printf("Enter the file name containing sales data:\n");
     scanf("%s", fileName);
     printf("\n");
