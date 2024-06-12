@@ -61,6 +61,20 @@ int main() {
     printf("Average sales:\t$%.2f\n\n", total / 12);
 
     //moving average
+    printf("Six-Month Moving Average Report:\n");
+    for (int i=0; i<7; i++) {
+        total = 0;
+        for (int j=i; j<i+6; j++) {
+            total += sales[j];
+        }
+        if ((strlen(months[i]) + strlen(months[i+5]) + 3) < 15) {
+            printf("%s - %s:\t\t$%.2f\n", months[i], months[i+5], total / 6);
+        }
+        else {
+            printf("%s - %s:\t$%.2f\n", months[i], months[i+5], total / 6);
+        }
+    }
+    printf("\n");
 
     //descending sales
     printf("Sales Report (Highest to Lowest):\n");
