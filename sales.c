@@ -28,10 +28,10 @@ int main() {
     printf("Monthly sales report:\n");
     for (int i=0; i<12; i++) {
         if (strlen(months[i]) < 7) {
-            printf("%s:\t\t%.2f\n", months[i], sales[i]);
+            printf("%s:\t\t$%.2f\n", months[i], sales[i]);
         }
         else {
-            printf("%s:\t%.2f\n", months[i], sales[i]);
+            printf("%s:\t$%.2f\n", months[i], sales[i]);
         }
     }
     printf("\n");
@@ -56,9 +56,9 @@ int main() {
 
     //summary
     printf("Sales summary:\n");
-    printf("Minimum sales:\t%.2f\t(%s)\n", salesSorted[0], monthsSorted[0]);
-    printf("Maximum sales:\t%.2f\t(%s)\n", salesSorted[11], monthsSorted[11]);
-    printf("Average sales:\t%.2f\n\n", total / 12);
+    printf("Minimum sales:\t$%.2f\t(%s)\n", salesSorted[0], monthsSorted[0]);
+    printf("Maximum sales:\t$%.2f\t(%s)\n", salesSorted[11], monthsSorted[11]);
+    printf("Average sales:\t$%.2f\n\n", total / 12);
 
     //moving average
 
@@ -66,10 +66,10 @@ int main() {
     printf("Sales Report (Highest to Lowest):\n");
     for (int i=0; i<12; i++) {
         if (strlen(monthsSorted[i]) < 7) {
-            printf("%s:\t\t%.2f\n", monthsSorted[i], salesSorted[i]);
+            printf("%s:\t\t$%.2f\n", monthsSorted[i], salesSorted[i]);
         }
         else {
-            printf("%s:\t%.2f\n", monthsSorted[i], salesSorted[i]);
+            printf("%s:\t$%.2f\n", monthsSorted[i], salesSorted[i]);
         }
     }
     printf("\n");
