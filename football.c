@@ -10,14 +10,16 @@ int main() {
     printf("Enter 0 or 1 to stop\nEnter NFL score: ");
     scanf("%d", &score);
     
-    int tempScore = score;
-    for (int j=0; j<5; j++) {
-        count[j] = 0;
-        while ((tempScore - points[j] > 1) || (tempScore == points[j])) { //no point value of 1 exists
-            tempScore -= points[j];
-            count[j]++;
+    for (int i = 0; i < 5; i++) {
+        int tempScore = score;
+        for (int j = i; j < 5; j++) {
+            count[j] = 0;
+            while ((tempScore - points[j] > 1) || (tempScore == points[j])) { //no point value of 1 exists
+                tempScore -= points[j];
+                count[j]++;
+            }
+            printf("%d %s, ", count[j], name[j]);
         }
-        printf("%d %s, ", count[j], name[j]);
+        printf("\n");
     }
-    printf("\n");
 }
