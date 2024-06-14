@@ -43,10 +43,18 @@ void generateCounts(int tempScore1, int index) {
 }
 
 int main() {
-    //get score input
-    printf("Enter 0 or 1 to stop\nEnter NFL score: ");
-    scanf("%d", &score);
-    
-    //print combinations
-    generateCounts(score, 0);
+    while (1) {
+        //get score input
+        printf("Enter 0 or 1 to stop\nEnter NFL score: ");
+        scanf("%d", &score);
+
+        //break from loop if invalid score
+        if (score < 2) {
+            break;
+        }
+        
+        //print combinations
+        generateCounts(score, 0);
+        printf("\n");
+    }
 }
